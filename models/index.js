@@ -1,7 +1,7 @@
-const User = require('./User');
-const Character = require('./Character');
+// const User = require('./User');
+// const Character = require('./Character');
 
-// create associations below
+// // create associations below
 
 
-module.exports = { User, Character };
+// module.exports = { User, Character };
