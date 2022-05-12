@@ -1,7 +1,7 @@
 const User = require("./User");
 const Character = require("./Character");
 
-// create associations below
+// // create associations below
 
 User.hasMany(Character, {
 	foreignKey: "user_id",
