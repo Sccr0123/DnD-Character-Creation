@@ -48,6 +48,14 @@ Character.init({
 		type: DataTypes.INTEGER,
 		allowNull: false,
 	},
+	creator: {
+		type: DataTypes.INTEGER,
+		allowNull: false,
+		references: {
+			model: "user",
+			key: "id",
+		},
+	},
 });
 
 module.exports = Character;
