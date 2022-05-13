@@ -1,3 +1,4 @@
+const sequelize = require("../config/connection");
 const { Character } = require("../models");
 
 const characterdata = [
@@ -11,7 +12,7 @@ const characterdata = [
 		int: 10,
 		wis: 12,
 		cha: 10,
-		creator: 0,
+		creator: 1,
 	},
 	{
 		name: "Legolas",
@@ -23,7 +24,19 @@ const characterdata = [
 		int: 12,
 		wis: 14,
 		cha: 12,
-		creator: 1,
+		creator: 2,
+	},
+	{
+		name: "Gandalf",
+		class: "Wizard",
+		level: 7,
+		str: 8,
+		dex: 8,
+		con: 10,
+		int: 20,
+		wis: 14,
+		cha: 12,
+		creator: 3,
 	},
 	{
 		name: "Gimli",
@@ -35,19 +48,7 @@ const characterdata = [
 		int: 12,
 		wis: 12,
 		cha: 8,
-		creator: 2,
-	},
-	{
-		name: "",
-		class: "",
-		level: 0,
-		str: 0,
-		dex: 0,
-		con: 0,
-		int: 0,
-		wis: 0,
-		cha: 0,
-		creator: 3,
+		creator: 4,
 	},
 ];
 
