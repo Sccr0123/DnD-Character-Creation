@@ -12,7 +12,7 @@ const characterdata = [
 		int: 10,
 		wis: 12,
 		cha: 10,
-		creator: 1,
+		user_id: 1,
 	},
 	{
 		name: "Legolas",
@@ -24,7 +24,7 @@ const characterdata = [
 		int: 12,
 		wis: 14,
 		cha: 12,
-		creator: 2,
+		user_id: 2,
 	},
 	{
 		name: "Gandalf",
@@ -36,7 +36,7 @@ const characterdata = [
 		int: 20,
 		wis: 14,
 		cha: 12,
-		creator: 3,
+		user_id: 3,
 	},
 	{
 		name: "Gimli",
@@ -48,7 +48,7 @@ const characterdata = [
 		int: 12,
 		wis: 12,
 		cha: 8,
-		creator: 4,
+		user_id: 4,
 	},
 ];
 
