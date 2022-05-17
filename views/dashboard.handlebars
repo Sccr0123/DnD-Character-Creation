@@ -1,0 +1,15 @@
+{{#if characters.length}}
+<section>
+  <h2>Your Characters</h2>
+  <dl>
+    {{#each characters as |post|}}
+    <dd>
+      {{> character-info post}}
+      <a href="/dashboard/edit/{{character.id}}" class="edit-link">Edit Character</a>
+    </dd>
+    {{/each}}
+  </dl>
+</section>
+{{/if}}
+
+<a href="/new_character"><button >New Character</button></a>
