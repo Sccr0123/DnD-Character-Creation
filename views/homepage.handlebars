@@ -1,0 +1,21 @@
+<ol class="character-list">
+    {{#each character as |character|}}
+    <li>
+        <article class="character">
+            <div class="name">
+                <span>Name: {{character.name}}</span>
+                <span>Class: {{character.class}}</span>
+                <span>Level: {{character.level}}</span>
+            </div>
+            <div class="stats">
+                <span>Strength {{character.str}}</span>
+                <span>Dexterity {{character.dex}}</span>
+                <span>Constitution {{character.con}}</span>
+                <span>Intelligence {{character.int}}</span>
+                <span>Wisdom {{character.wis}}</span>
+                <span>Charisma {{character.cha}}</span>
+            </div>
+        </article>
+    </li>
+    {{/each}}
+</ol>
