@@ -1,45 +1,41 @@
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>DnD Character Creation</title>
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		/>
-		<link rel="stylesheet" href="/stylesheets/style.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DnD Character Creation</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
-	<body>
-		<div class="wrapper">
-			<header class="col-12">
-				<div>
-					<nav>
-						<a class="light" href="/">Home</a>
-						{{#if loggedIn}}
-							<a class="light" href="/dashboard">Dashboard</a>
-							<a
-								class="light right"
-								href="/"
-								id="logout"
-							>Logout</a>
-						{{else}}
-							<a class="light right" href="/login">Login</a>
-						{{/if}}
-					</nav>
-				</div>
-				<h1 class="title col-2 text-nowrap m-3">DnD Character Creation</h1>
-			</header>
-			<main>
-				{{{body}}}
-			</main>
-		</div>
+  <body>
+    <div class="wrapper">
+      <header class="col-12">
+        <div>
+          <nav>
+            <a class="light" href="/">Home</a>
+            {{#if loggedIn}}
+              <a class="light" href="/dashboard">Dashboard</a>
+              <button id="logout" class="btn-no-style">logout</button>
+            {{else}}
+              <a class="light right" href="/login">Login</a>
+            {{/if}}
+          </nav>
+        </div>
+        <h1 class="title col-2 text-nowrap m-3">DnD Character Creation</h1>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
 
-		{{#if loggedIn}}
-			<script src="/javascript/logout.js"></script>
-		{{/if}}
+    {{#if loggedIn}}
+      <script src="../../public/javascript/logout.js"></script>
+    {{/if}}
 
-	</body>
+  </body>
 
 </html>
