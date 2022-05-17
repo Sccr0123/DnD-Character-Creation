@@ -1,34 +1,34 @@
 {
-  "name": "project-2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seeds": "node seeds/index.js",
-    "watch": "modemon server.js",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/soulslurpee/project-2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/soulslurpee/project-2/issues"
-  },
-  "homepage": "https://github.com/soulslurpee/project-2#readme",
-  "dependencies": {
-    "connect-session-sequelize": "^7.1.3",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-session": "^1.17.3",
-    "mysql2": "^2.3.3",
-    "sequelize": "^6.19.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.16"
-  }
+	"name": "project-2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"seeds": "node seeds/index.js",
+		"watch": "nodemon server.js",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/soulslurpee/project-2.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/soulslurpee/project-2/issues"
+	},
+	"homepage": "https://github.com/soulslurpee/project-2#readme",
+	"dependencies": {
+		"connect-session-sequelize": "^7.1.3",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"express-session": "^1.17.3",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.19.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.16"
+	}
 }

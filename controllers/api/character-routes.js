@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
 const { Character, User } = require("../../models");
-// const withAuth = require("../../utils/auth");
+const withAuth = require("../../utils/auth");
 
 // get all characters
 router.get("/", (req, res) => {
@@ -128,7 +128,7 @@ router.delete("/:id", withAuth, (req, res) => {
 				});
 				return;
 			}
-			res.json(dbPostData);
+			res.json("Character Deleted!");
 		})
 		.catch((err) => {
 			console.log(err);

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // /api/users
 
@@ -53,7 +54,7 @@ router.delete("/:id", (req, res) => {
 				res.status(404).json({ message: "No user found with this id" });
 				return;
 			}
-			res.json(dbUserData);
+			res.json("User Deleted!");
 		})
 		.catch((err) => res.status(500).json(err));
 });
