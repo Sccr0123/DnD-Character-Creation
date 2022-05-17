@@ -41,4 +41,50 @@ router.get("/", (req, res) => {
 		});
 });
 
+// get single post
+router.get("/Character/:id", (req, res) => {
+	Character.findOne({
+		where: {
+			id: req.params.id,
+		},
+		attributes: [
+			"id",
+			"name",
+			"class",
+			"level",
+			"str",
+			"dex",
+			"con",
+			"int",
+			"wis",
+			"cha",
+		],
+		include: [
+			{
+				model: User,
+				attributes: ["username"],
+			},
+		],
+	})
+		.then((dbCharacterData) => {
+			if (!dbCharacterData) {
+				res.status(404).json({
+					message: "No Character found with this id",
+				});
+				return;
+			}
+
+			const character = dbCharacterData.get({ plain: true });
+
+			res.render("single-character", {
+				character,
+				loggedIn: req.session.loggedIn,
+			});
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
+});
+
 module.exports = router;
