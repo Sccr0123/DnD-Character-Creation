@@ -92,6 +92,8 @@ a.article:hover {
   background: #6d7fcc !important;
   color: #fff !important;
 }
+
+/* Custom styles */
 body,
 html {
   box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
@@ -169,7 +171,7 @@ h2 {
   background-color: #626a54;
   color: transparent;
   text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   font-family: "Cinzel Decorative", cursive;
   margin: 65px;
   padding-top: 29px;
