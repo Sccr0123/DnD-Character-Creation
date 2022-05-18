@@ -67,4 +67,13 @@ router.get("/new_character", (req, res) => {
 	res.render("creation");
 });
 
+router.post('/new_character', (req,res) => {
+    Character.create(req.body)
+    .then(dbCharacterData => res.json(dbCharacterData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
