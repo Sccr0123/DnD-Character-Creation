@@ -92,3 +92,92 @@ a.article:hover {
   background: #6d7fcc !important;
   color: #fff !important;
 }
+body,
+html {
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0;
+  filter: url(#wavy2);
+  background-color: #f9f7f4;
+}
+
+nav {
+  box-shadow: 2px 3px 20px black, 0 0 53px #8a4d0f inset;
+  background: #f9f7f4 !important;
+  filter: url(#wavy2);
+  background-color: #f9f7f4 !important;
+  font: bold 20px Cinzel Decorative, cursive;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
+}
+
+a {
+  color: #6c7b67;
+  font-family: "Cinzel Decorative", cursive;
+  /* font-family: "Macondo", cursive;
+  font-family: "MedievalSharp", cursive; */
+  /* font-family: "Macondo", cursive;
+  font-family: "Pirata One", cursive; */
+}
+
+a:hover {
+  color: #f9f7f4;
+  text-decoration: underline;
+}
+
+form {
+  box-shadow: 0px 1px 5px 4px #232323, 0 0 32px #8a4d0f inset;
+  background: #f9f7f4;
+  /* box-shadow: 2px 3px 8px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0; */
+  filter: url(#wavy2);
+  font-family: "Cinzel Decorative", cursive;
+}
+
+button {
+  font-family: "Cinzel Decorative", cursive;
+  /* font-family: "Macondo", cursive;
+  font-family: "MedievalSharp", cursive; */
+  /* font-family: "Macondo", cursive;
+  font-family: "Pirata One", cursive; */
+  float: left;
+  margin-right: 2px;
+  background-color: #8fa189;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  font-weight: bold;
+  border: solid 5px #000;
+  border-width: 0 4px 5px 0;
+  border-radius: 5px;
+  border-color: transparent #6c7b67 #7f8f79 transparent;
+  background-clip: padding-box;
+  text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
+  color: #232323;
+}
+
+button:hover {
+  border-width: 0 2px 3px 0;
+  margin-right: 4px;
+  position: relative;
+  left: 2px;
+  top: 3px;
+}
+
+h1,
+h2 {
+  font: bold 50px Cinzel Decorative, cursive;
+  background-color: #626a54;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
+  -webkit-background-clip: text;
+  font-family: "Cinzel Decorative", cursive;
+  margin: 65px;
+  padding-top: 29px;
+  font-size: 50px;
+  /* font-family: "Eagle Lake", cursive; */
+  /* font-family: 'Macondo', cursive;
+    font-family: 'MedievalSharp', cursive;
+    font-family: 'Pirata One', cursive;
+    font-family: 'Tangerine', cursive;
+    font-family: 'UnifrakturCook', cursive; */
+}
