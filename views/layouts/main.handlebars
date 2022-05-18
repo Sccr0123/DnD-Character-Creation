@@ -1,44 +1,53 @@
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>DnD Character Creation</title>
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		/>
-		<link rel="stylesheet" href="/stylesheets/style.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DnD Character Creation</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pirata+One&family=UnifrakturCook&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&family=Pirata+One&family=UnifrakturCook&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Eagle+Lake&family=Macondo&family=MedievalSharp&family=Pirata+One&family=Tangerine:wght@400;700&family=UnifrakturCook&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
 
-	<body>
-		<div class="wrapper">
-			<header class="col-12">
-				<div>
-					<nav>
-						<a class="light" href="/">Home</a>
-						{{#if loggedIn}}
-							<a class="light" href="/dashboard">Dashboard</a>
-							<button
-								id="logout"
-								class="btn-no-style"
-							>logout</button>
-						{{else}}
-							<a class="light right" href="/login">Login</a>
-						{{/if}}
-					</nav>
-				</div>
-				<h1 class="title col-2 text-nowrap m-3">DnD Character Creation</h1>
-			</header>
-			<main>
-				{{{body}}}
-			</main>
-		</div>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="light nav-link" href="/">Home</a>
+      {{#if loggedIn}}
+        <a class="light nav-link" href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+      {{else}}
+        <a class="light right" href="/login">Login</a>
+      {{/if}}
+    </nav>
+    <div class="wrapper">
+      <header class="col-12">
+        <h1 class="title text-center text-nowrap">DnD Character Creation</h1>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
 
-		{{#if loggedIn}}
-			<script src="/javascript/logout.js"></script>
-		{{/if}}
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
 
-	</body>
+  </body>
 
 </html>
