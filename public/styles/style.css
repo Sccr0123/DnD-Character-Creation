@@ -133,14 +133,14 @@ h2 {
   font-family: "Cinzel Decorative", cursive;
 }
 
-/* .card > article {
+.card > article {
   color: black;
   text-decoration: none;
   height: inherit;
 }
-.card > article > div {
+/* .card > article > div {
   height: inherit;
-} */
+} */ */
 
 /* .card > article > div > .list-group-item {
   height: -webkit-fill-available;

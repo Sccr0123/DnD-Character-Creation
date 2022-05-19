@@ -1,22 +1,26 @@
-<div class="card full-char" style="col-3">
-  <article class="character">
-    <div
-      class="name list-group list-group-flush d-flex justify-content-between"
-    >
-      <div class="list-group-item">Name: {{name}}</div>
-      <div class="list-group-item">Class: {{class}}</div>
-      <div class="list-group-item">Level: {{level}}</div>
-      <div class="list-group-item">Creator: {{user.username}}</div>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="card full-char" style="col-3">
+      <article class="character">
+        <div
+          class="name list-group list-group-flush d-flex justify-content-between"
+        >
+          <div class="list-group-item">Name: {{name}}</div>
+          <div class="list-group-item">Class: {{class}}</div>
+          <div class="list-group-item">Level: {{level}}</div>
+          <div class="list-group-item">Creator: {{user.username}}</div>
+        </div>
+        <div
+          class="stats name list-group list-group-flush d-flex justify-content-between"
+        >
+          <div class="list-group-item">Strength {{str}}</div>
+          <div class="list-group-item">Dexterity {{dex}}</div>
+          <div class="list-group-item">Constitution {{con}}</div>
+          <div class="list-group-item">Intelligence {{int}}</div>
+          <div class="list-group-item">Wisdom {{wis}}</div>
+          <div class="list-group-item">Charisma {{cha}}</div>
+        </div>
+      </article>
     </div>
-    <div
-      class="stats name list-group list-group-flush d-flex justify-content-between"
-    >
-      <div class="list-group-item">Strength {{str}}</div>
-      <div class="list-group-item">Dexterity {{dex}}</div>
-      <div class="list-group-item">Constitution {{con}}</div>
-      <div class="list-group-item">Intelligence {{int}}</div>
-      <div class="list-group-item">Wisdom {{wis}}</div>
-      <div class="list-group-item">Charisma {{cha}}</div>
-    </div>
-  </article>
+  </div>
 </div>
