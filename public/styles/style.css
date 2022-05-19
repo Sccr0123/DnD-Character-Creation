@@ -1,0 +1,185 @@
+/* Sidebar Styling */
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #7386D5;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #6d7fcc;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+/* Custom styles */
+body,
+html {
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0;
+  filter: url(#wavy2);
+  background-color: #f9f7f4;
+}
+
+nav {
+  box-shadow: 2px 3px 20px black, 0 0 53px #8a4d0f inset;
+  background: #f9f7f4 !important;
+  filter: url(#wavy2);
+  background-color: #f9f7f4 !important;
+  font: bold 20px Cinzel Decorative, cursive;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
+}
+
+a {
+  color: #6c7b67;
+  font-family: "Cinzel Decorative", cursive;
+  /* font-family: "Macondo", cursive;
+  font-family: "MedievalSharp", cursive; */
+  /* font-family: "Macondo", cursive;
+  font-family: "Pirata One", cursive; */
+}
+
+a:hover {
+  color: #f9f7f4;
+  text-decoration: underline;
+}
+
+form {
+  box-shadow: 0px 1px 5px 4px #232323, 0 0 32px #8a4d0f inset;
+  background: #f9f7f4;
+  /* box-shadow: 2px 3px 8px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0; */
+  filter: url(#wavy2);
+  font-family: "Cinzel Decorative", cursive;
+}
+
+button {
+  font-family: "Cinzel Decorative", cursive;
+  /* font-family: "Macondo", cursive;
+  font-family: "MedievalSharp", cursive; */
+  /* font-family: "Macondo", cursive;
+  font-family: "Pirata One", cursive; */
+  float: left;
+  margin-right: 2px;
+  background-color: #8fa189;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  font-weight: bold;
+  border: solid 5px #000;
+  border-width: 0 4px 5px 0;
+  border-radius: 5px;
+  border-color: transparent #6c7b67 #7f8f79 transparent;
+  background-clip: padding-box;
+  text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
+  color: #232323;
+}
+
+button:hover {
+  border-width: 0 2px 3px 0;
+  margin-right: 4px;
+  position: relative;
+  left: 2px;
+  top: 3px;
+}
+
+h1,
+h2 {
+  font: bold 50px Cinzel Decorative, cursive;
+  background-color: #626a54;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
+  /* -webkit-background-clip: text; */
+  font-family: "Cinzel Decorative", cursive;
+  margin: 65px;
+  padding-top: 29px;
+  font-size: 50px;
+  /* font-family: "Eagle Lake", cursive; */
+  /* font-family: 'Macondo', cursive;
+    font-family: 'MedievalSharp', cursive;
+    font-family: 'Pirata One', cursive;
+    font-family: 'Tangerine', cursive;
+    font-family: 'UnifrakturCook', cursive; */
+}
