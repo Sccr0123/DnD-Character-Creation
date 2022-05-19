@@ -69,7 +69,8 @@ button,
   width: fit-content;
 }
 
-button:hover {
+button:hover,
+.btn-custom:hover {
   border-width: 0 2px 3px 0;
   margin-right: 4px;
   position: relative;
