@@ -127,6 +127,12 @@ h2 {
   height: -webkit-fill-available;
 }
 
+.full-char {
+  width: fit-content;
+  height: fit-content;
+  font-family: "Cinzel Decorative", cursive;
+}
+
 /* .card > article {
   color: black;
   text-decoration: none;
