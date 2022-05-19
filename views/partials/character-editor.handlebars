@@ -1,121 +1,133 @@
 <div class="container">
-    <form class="row justify-content-md-center form-inline my-3">
-        <div class="col-3 form-group">
-            <label for="characterName">Name: </label>
-            {{#if character}}
-              <p>{{character.name}}</p>
-            {{/if}}
-            <input type="text" id="characterName"/>
-        </div>
-        <div class="col-3 form-group">
-            <label for="characterClass">Class: </label>
-            {{#if character}}
-              <p>{{character.class}}</p>
-            {{/if}}
-            <input type="text" id="characterClass"/>
-        </div>
-        <div class="col-3 form-group">
-            <label for="characterRace">Race: </label>
-            {{#if character}}
-              <p>{{character.race}}</p>
-            {{/if}}
-            <input type="text" id="characterRace"/>
-        </div>
-    </form>
+  <form class="row justify-content-md-center form-inline my-3">
+    <div class="col-3 form-group">
+      <label for="characterName">Name: </label>
+      {{#if character}}
+        <p>{{character.name}}</p>
+      {{/if}}
+      <input type="text" id="characterName" />
+    </div>
+    <div class="col-3 form-group">
+      <label for="characterClass">Class: </label>
+      {{#if character}}
+        <p>{{character.class}}</p>
+      {{/if}}
+      <input type="text" id="characterClass" />
+    </div>
+    <div class="col-3 form-group">
+      <label for="characterRace">Race: </label>
+      {{#if character}}
+        <p>{{character.race}}</p>
+      {{/if}}
+      <input type="text" id="characterRace" />
+    </div>
+  </form>
 </div>
 <div class="container">
-    <form class="row justify-content-around form-inline">
-        <div class="col-sm-2 my-1">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">STR</div>
-                </div>
-                {{#if character}}
-                  <p>{{character.str}}</p>
-                {{/if}}
-                <input type="text" class="form-control" id="characterSTR"  >
-                <div class="input-group-append">
-                    <div class="input-group-text">+0</div>
-                </div>
-            </div>
+  <form class="row justify-content-around form-inline">
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">STR</div>
         </div>
-        <div class="col-sm-2 my-1">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">DEX</div>
-                </div>
-                {{#if character}}
-                  <p>{{character.dex}}</p>
-                {{/if}}
-                <input type="text" class="form-control" id="characterDEX"  >
-                <div class="input-group-append">
-                    <div class="input-group-text">+0</div>
-                </div>
-            </div>
+        {{#if character}}
+          <p>{{character.str}}</p>
+        {{/if}}
+        <input type="text" class="form-control" id="characterSTR" />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
         </div>
-        <div class="col-sm-2 my-1">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">CON</div>
-                </div>
-                {{#if character}}
-                  <p>{{character.con}}</p>
-                {{/if}}
-                <input type="text" class="form-control" id="characterCON"  >
-                <div class="input-group-append">
-                    <div class="input-group-text">+0</div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">DEX</div>
         </div>
-        <div class="col-sm-2 my-1">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">INT</div>
-                </div>
-                {{#if character}}
-                  <p>{{character.int}}</p>
-                {{/if}}
-                <input type="text" class="form-control" id="characterINT"  >
-                <div class="input-group-append">
-                    <div class="input-group-text">+0</div>
-                </div>
-            </div>
+        {{#if character}}
+          <p>{{character.dex}}</p>
+        {{/if}}
+        <input type="text" class="form-control" id="characterDEX" />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
         </div>
-        <div class="col-sm-2 my-1">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">WIS</div>
-                </div>
-                {{#if character}}
-                  <p>{{character.wis}}</p>
-                {{/if}}
-                <input type="text" class="form-control" id="characterWIS"  >
-                <div class="input-group-append">
-                    <div class="input-group-text">+0</div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">CON</div>
         </div>
-        <div class="col-sm-2 my-1">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">CHA</div>
-                </div>
-                {{#if character}}
-                  <p>{{character.cha}}</p>
-                {{/if}}
-                <input type="text" class="form-control" id="characterCHA"  >
-                <div class="input-group-append">
-                    <div class="input-group-text">+0</div>
-                </div>
-            </div>
+        {{#if character}}
+          <p>{{character.con}}</p>
+        {{/if}}
+        <input type="text" class="form-control" id="characterCON" />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
         </div>
-    </form>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">INT</div>
+        </div>
+        {{#if character}}
+          <p>{{character.int}}</p>
+        {{/if}}
+        <input type="text" class="form-control" id="characterINT" />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">WIS</div>
+        </div>
+        {{#if character}}
+          <p>{{character.wis}}</p>
+        {{/if}}
+        <input type="text" class="form-control" id="characterWIS" />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">CHA</div>
+        </div>
+        {{#if character}}
+          <p>{{character.cha}}</p>
+        {{/if}}
+        <input type="text" class="form-control" id="characterCHA" />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 
 <div class="container">
-    <div class="row justify-content-around">
-        <input class="col-sm-2 my-1 btn btn-primary" type="button" value="Save Character">
-        <input class="col-sm-2 my-1 btn btn-primary" type="button" value="Delete Character">
-        <input class="col-sm-2 my-1 btn btn-primary" type="button" value="Reset Character">
-    </div>
+  <div class="row justify-content-around">
+    <input
+      class="col-sm-2 my-1 btn btn-custom"
+      type="button"
+      value="Save Character"
+    />
+    <input
+      class="col-sm-2 my-1 btn btn-custom"
+      type="button"
+      value="Delete Character"
+    />
+    <input
+      class="col-sm-2 my-1 btn btn-custom"
+      type="button"
+      value="Reset Character"
+    />
+  </div>
 </div>
