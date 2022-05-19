@@ -1,5 +1,6 @@
 /* Sidebar Styling */
-.wrapper {
+
+/* .wrapper {
   display: flex;
   width: 100%;
 }
@@ -11,7 +12,7 @@
   left: 0;
   height: 100vh;
   z-index: 999;
-  background: #7386D5;
+  background: #7386d5;
   color: #fff;
   transition: all 0.3s;
 }
@@ -42,11 +43,11 @@
 }
 
 #sidebar ul li a:hover {
-  color: #7386D5;
+  color: #7386d5;
   background: #fff;
 }
 
-#sidebar ul li.active>a,
+#sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: #fff;
   background: #6d7fcc;
@@ -84,14 +85,14 @@ ul.CTAs a {
 
 a.download {
   background: #fff;
-  color: #7386D5;
+  color: #7386d5;
 }
 
 a.article,
 a.article:hover {
   background: #6d7fcc !important;
   color: #fff !important;
-}
+} */
 
 /* Custom styles */
 body,
@@ -102,6 +103,10 @@ html {
   background-color: #f9f7f4;
 }
 
+body {
+  height: -webkit-fill-available;
+}
+
 nav {
   box-shadow: 2px 3px 20px black, 0 0 53px #8a4d0f inset;
   background: #f9f7f4 !important;
@@ -110,6 +115,7 @@ nav {
   font: bold 20px Cinzel Decorative, cursive;
   color: transparent;
   text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
+  padding: 8px;
 }
 
 a {
@@ -171,7 +177,7 @@ h2 {
   background-color: #626a54;
   color: transparent;
   text-shadow: 2px 2px 3px rgb(255 255 255 / 50%);
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   font-family: "Cinzel Decorative", cursive;
   margin: 65px;
   padding-top: 29px;
