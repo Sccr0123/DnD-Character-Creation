@@ -57,14 +57,18 @@ router.get("/:id", (req, res) => {
 			},
 		],
 	})
-		.then((dbPostData) => {
-			if (!dbPostData) {
+		.then((dbCharacterData) => {
+			if (!dbCharacterData) {
 				res.status(404).json({
 					message: "No Character found with this id",
 				});
 				return;
 			}
-			res.json(dbPostData);
+			res.json(dbCharacterData);
+			// res.render('character-info', {
+			// 	dbCharacterData,
+			// 	loggedIn: req.session.logg
+			// });
 		})
 		.catch((err) => {
 			console.log(err);
