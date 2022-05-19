@@ -6,7 +6,7 @@
   <dl>
     {{#each characters as |character|}}
     <dd>
-      {{> full-character-info character}}
+      {{> character-info character}}
       <a href="/dashboard/edit/{{character.id}}" class="edit-link">Edit Character</a>
     </dd>
     {{/each}}
