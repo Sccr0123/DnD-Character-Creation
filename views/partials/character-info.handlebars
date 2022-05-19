@@ -1,12 +1,12 @@
 <div class="card" style="col-3">
-	<a href="/api/characters/{{id}}">
+	<a class="card-hover" href="/api/characters/{{id}}">
 		<div class="list-group list-group-flush d-flex justify-content-between">
-			<span>
+			
 				<div class="list-group-item">Name: {{name}}</div>
 				<div class="list-group-item">Class: {{class}}</div>
 				<div class="list-group-item">Level:{{level}}</div>
 				<div class="list-group-item">Created By:
-					{{user.username}}</div></span>
+					{{user.username}}</div>
 		</div>
 	</a>
 </div>
