@@ -4,9 +4,9 @@
 <section>
   <h2>Your Characters</h2>
   <dl>
-    {{#each characters as |post|}}
+    {{#each characters as |character|}}
     <dd>
-      {{> character-info post}}
+      {{> full-character-info character}}
       <a href="/dashboard/edit/{{character.id}}" class="edit-link">Edit Character</a>
     </dd>
     {{/each}}
