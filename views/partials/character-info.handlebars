@@ -1,7 +1,12 @@
 <div class="card" style="col-3">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{character.name}}</li>
-    <li class="list-group-item">{{character.class}}</li>
-    <li class="list-group-item">{{character.level}}</li>
-  </ul>
+	<a href="/characters/{{id}}">
+		<div class="list-group list-group-flush d-flex justify-content-between">
+			<span>
+				<div class="list-group-item">Name: {{name}}</div>
+				<div class="list-group-item">Class: {{class}}</div>
+				<div class="list-group-item">Level:{{level}}</div>
+				<div class="list-group-item">Created By:
+					{{user.username}}</div></span>
+		</div>
+	</a>
 </div>
