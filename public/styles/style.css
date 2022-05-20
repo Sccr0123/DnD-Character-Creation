@@ -131,16 +131,22 @@ h2 {
   width: fit-content;
   height: fit-content;
   font-family: "Cinzel Decorative", cursive;
+  padding: 0;
 }
 
-.card > article {
+.card {
   color: black;
   text-decoration: none;
   height: inherit;
 }
+
+.disabled {
+  pointer-events: none;
+}
+
 /* .card > article > div {
   height: inherit;
-} */ */
+} */
 
 /* .card > article > div > .list-group-item {
   height: -webkit-fill-available;
