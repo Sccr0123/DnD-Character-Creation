@@ -43,6 +43,49 @@ router.get("/", (req, res) => {
 		});
 });
 
+router.get('/edit/:id', (req, res) => {
+	Character.findOne({
+		where: {
+			id: req.params.id,
+		},
+		attributes: [
+			"id",
+			"name",
+			"class",
+			"level",
+			"str",
+			"dex",
+			"con",
+			"int",
+			"wis",
+			"cha",
+		],
+		include: [
+			{
+				model: User,
+				attributes: ["username"],
+			},
+		],
+	})
+		.then((dbCharacterData) => {
+			if (!dbCharacterData) {
+				res.status(404).json({
+					message: "No Character found with this id",
+				});
+				return;
+			}
+			// console.log(dbCharacterData);
+			res.render('creation', {
+				dbCharacterData,
+				loggedIn: req.session.loggedIn
+			});
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
+});
+
 router.put("/edit/:id", (req, res) => {
 	Character.update(req.body, {
 		individualHooks: true,

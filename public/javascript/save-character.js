@@ -1,4 +1,4 @@
-function saveBtnHandler(event) {
+async function saveBtnHandler(event) {
     event.preventDefault();
 
     console.log('button clicked')
@@ -14,7 +14,7 @@ function saveBtnHandler(event) {
     const cha = document.querySelector("#characterCHA").value.trim();
 
     if (name && charClass && race && str && dex && con && int && wis && cha) {
-        const response = fetch('/api/characters', {
+        const response = await fetch('/api/characters', {
             method: "post",
             body: JSON.stringify({
                 name,
@@ -31,6 +31,7 @@ function saveBtnHandler(event) {
         });
 
         if (response.ok) {
+            res.json({ message: 'character saved' });
             document.location.replace('/dashboard');
         } else {
             console.log(response.statusText);
@@ -38,4 +39,29 @@ function saveBtnHandler(event) {
     }
 }
 
+function deleteBtnHandler(event) {
+    event.preventDefault();
+
+    console.log('button clicked');
+
+    var baseUrl = window.location.href;
+    var urlArray = baseUrl.split('/');
+    const id = urlArray[urlArray.length - 1];
+    
+    console.log(id); 
+
+    const response = fetch('/api/characters/' + id, {
+        method: 'delete',
+        headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+        res.json({ message: 'character deleted' });
+        document.replace('/dashboard');
+    } else {
+        console.log(response.statusText);
+    }
+}
+
 document.querySelector('#saveBtn').addEventListener('click', saveBtnHandler);
+document.querySelector('#deleteBtn').addEventListener('click', deleteBtnHandler);
