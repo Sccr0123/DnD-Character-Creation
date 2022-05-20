@@ -7,6 +7,13 @@
       {{/if}}
       <input type="text" id="characterName" />
     </div>
+      <div class="col-3 form-group">
+      <label for="characterLevel">Level: </label>
+      {{#if character}}
+        <p>{{character.level}}</p>
+      {{/if}}
+      <input type="text" id="characterLevel" />
+    </div>
     <div class="col-3 form-group">
       <label for="characterClass">Class: </label>
       {{#if character}}
@@ -115,6 +122,7 @@
 <div class="container">
   <div class="row justify-content-around">
     <input
+      id="saveBtn"
       class="col-sm-2 my-1 btn btn-custom"
       type="button"
       value="Save Character"
@@ -131,3 +139,5 @@
     />
   </div>
 </div>
+
+<script src="/javascript/save-character.js"></script>
