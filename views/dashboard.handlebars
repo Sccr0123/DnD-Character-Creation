@@ -1,4 +1,4 @@
-{{> character-editor}}
+{{!-- {{> character-editor}} --}}
 
 {{#if characters.length}}
 <section>
@@ -6,7 +6,7 @@
   <dl>
     {{#each characters as |character|}}
     <dd>
-      {{> character-info character}}
+      {{> full-character-info character}}
       <a href="/dashboard/edit/{{character.id}}" class="edit-link">Edit Character</a>
     </dd>
     {{/each}}

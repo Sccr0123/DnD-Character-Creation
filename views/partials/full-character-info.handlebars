@@ -1,16 +1,22 @@
-<article class="character">
-	<div class="name">
-		<span>Name: {{name}}</span>
-		<span>Class: {{class}}</span>
-		<span>Level: {{level}}</span>
-        <span>Creator: {{user.username}}</span>
-	</div>
-	<div class="stats">
-		<span>Strength {{str}}</span>
-		<span>Dexterity {{dex}}</span>
-		<span>Constitution {{con}}</span>
-		<span>Intelligence {{int}}</span>
-		<span>Wisdom {{wis}}</span>
-		<span>Charisma {{cha}}</span>
-	</div>
-</article>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="card disabled full-char" style="col-3">
+      <article class="character">
+        <div
+          class="name stats list-group list-group-flush d-flex justify-content-between"
+        >
+          <div class="list-group-item">Name: {{name}}</div>
+          <div class="list-group-item">Class: {{class}}</div>
+          <div class="list-group-item">Level: {{level}}</div>
+          <div class="list-group-item">Creator: {{user.username}}</div>
+          <div class="list-group-item">Strength {{str}}</div>
+          <div class="list-group-item">Dexterity {{dex}}</div>
+          <div class="list-group-item">Constitution {{con}}</div>
+          <div class="list-group-item">Intelligence {{int}}</div>
+          <div class="list-group-item">Wisdom {{wis}}</div>
+          <div class="list-group-item">Charisma {{cha}}</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

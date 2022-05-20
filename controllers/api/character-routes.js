@@ -79,7 +79,7 @@ router.get("/:id", (req, res) => {
 router.post("/", withAuth, (req, res) => {
 	Character.create({
 		name: req.body.name,
-		class: req.body.class,
+		class: req.body.charClass,
 		level: req.body.level,
 		str: req.body.str,
 		dex: req.body.dex,
@@ -87,6 +87,7 @@ router.post("/", withAuth, (req, res) => {
 		int: req.body.int,
 		wis: req.body.wis,
 		cha: req.body.cha,
+		user_id: req.session.user_id
 	})
 		.then((dbPostData) => res.json(dbPostData))
 		.catch((err) => {

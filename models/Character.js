@@ -24,6 +24,7 @@ Character.init(
 		level: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
+			defaultValue: 1,
 		},
 		str: {
 			type: DataTypes.INTEGER,
@@ -51,7 +52,7 @@ Character.init(
 		},
 		user_id: {
 			type: DataTypes.INTEGER,
-			allowNull: false,
+			// allowNull: false,
 			references: {
 				model: "users",
 				key: "id",
