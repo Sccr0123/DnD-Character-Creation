@@ -134,11 +134,11 @@ h2 {
   padding: 0;
 }
 
-.card {
+/* .card {
   color: black;
   text-decoration: none;
   height: inherit;
-}
+} */
 
 .disabled {
   pointer-events: none;
