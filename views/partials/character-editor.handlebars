@@ -7,6 +7,13 @@
       {{/if}}
       <input type="text" id="characterName" />
     </div>
+      <div class="col-3 form-group">
+      <label for="characterLevel">Level: </label>
+      {{#if character}}
+        <p>{{character.level}}</p>
+      {{/if}}
+      <input type="text" id="characterLevel" />
+    </div>
     <div class="col-3 form-group">
       <label for="characterClass">Class: </label>
       {{#if character}}
