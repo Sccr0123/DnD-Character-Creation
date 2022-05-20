@@ -1,8 +1,6 @@
 async function saveBtnHandler(event) {
     event.preventDefault();
 
-    console.log('button clicked')
-
     const name = document.querySelector("#characterName").value.trim();
     const charClass = document.querySelector("#characterClass").value.trim();
     const race = document.querySelector("#characterRace").value.trim();
@@ -39,10 +37,8 @@ async function saveBtnHandler(event) {
     }
 }
 
-function deleteBtnHandler(event) {
+async function deleteBtnHandler(event) {
     event.preventDefault();
-
-    console.log('button clicked');
 
     var baseUrl = window.location.href;
     var urlArray = baseUrl.split('/');
@@ -50,7 +46,7 @@ function deleteBtnHandler(event) {
     
     console.log(id); 
 
-    const response = fetch('/api/characters/' + id, {
+    const response = await fetch('/api/characters/' + id, {
         method: 'delete',
         headers: { 'Content-Type': 'application/json' },
     });
@@ -61,7 +57,23 @@ function deleteBtnHandler(event) {
     } else {
         console.log(response.statusText);
     }
+};
+
+function resetBtnHandler(event) {
+    event.preventDefault();
+
+    document.getElementById('characterName').value = "";
+    document.getElementById('characterLevel').value = '';
+    document.getElementById('characterClass').value = '';
+    document.getElementById('characterRace').value = '';
+    document.getElementById('characterSTR').value = '';
+    document.getElementById('characterDEX').value = '';
+    document.getElementById('characterCON').value = '';
+    document.getElementById('characterINT').value = '';
+    document.getElementById('characterWIS').value = '';
+    document.getElementById('characterCHA').value = '';
 }
 
 document.querySelector('#saveBtn').addEventListener('click', saveBtnHandler);
 document.querySelector('#deleteBtn').addEventListener('click', deleteBtnHandler);
+document.querySelector('#resetBtn').addEventListener('click', resetBtnHandler);
