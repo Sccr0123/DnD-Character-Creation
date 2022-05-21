@@ -87,7 +87,7 @@ router.post("/", withAuth, (req, res) => {
 		int: req.body.int,
 		wis: req.body.wis,
 		cha: req.body.cha,
-		user_id: req.session.user_id
+		user_id: req.session.user_id,
 	})
 		.then((dbPostData) => res.json(dbPostData))
 		.catch((err) => {
@@ -96,29 +96,39 @@ router.post("/", withAuth, (req, res) => {
 		});
 });
 
-// router.put("/:id", withAuth, (req, res) => {
-// 	Post.update(
-// 		{
-// 			title: req.body.title,
-// 		},
-// 		{
-// 			where: {
-// 				id: req.params.id,
-// 			},
-// 		}
-// 	)
-// 		.then((dbPostData) => {
-// 			if (!dbPostData) {
-// 				res.status(404).json({ message: "No Character found with this id" });
-// 				return;
-// 			}
-// 			res.json(dbPostData);
-// 		})
-// 		.catch((err) => {
-// 			console.log(err);
-// 			res.status(500).json(err);
-// 		});
-// });
+router.put("/:id", withAuth, (req, res) => {
+	Character.update(
+		{
+			name: req.body.name,
+			class: req.body.charClass,
+			level: req.body.level,
+			str: req.body.str,
+			dex: req.body.dex,
+			con: req.body.con,
+			int: req.body.int,
+			wis: req.body.wis,
+			cha: req.body.cha,
+		},
+		{
+			where: {
+				id: req.params.id,
+			},
+		}
+	)
+		.then((dbPostData) => {
+			if (!dbPostData) {
+				res.status(404).json({
+					message: "No Character found with this id",
+				});
+				return;
+			}
+			res.json(dbPostData);
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
+});
 
 router.delete("/:id", withAuth, (req, res) => {
 	Character.destroy({
