@@ -2,15 +2,23 @@
 	<form class="row justify-content-md-center form-inline my-3">
 		<div class="col-3 form-group">
 			<label for="characterName">Name: </label>
-			<input type="text" id="characterName" />
+			<input type="text" id="characterName" value="{{character.name}}" />
 		</div>
 		<div class="col-3 form-group">
 			<label for="characterLevel">Level: </label>
-			<input type="text" id="characterLevel" />
+			<input
+				type="text"
+				id="characterLevel"
+				value="{{character.level}}"
+			/>
 		</div>
 		<div class="col-3 form-group">
 			<label for="characterClass">Class: </label>
-			<input type="text" id="characterClass" />
+			<input
+				type="text"
+				id="characterClass"
+				value="{{character.class}}"
+			/>
 		</div>
 		<div class="col-3 form-group">
 			<label for="characterRace">Race: </label>
@@ -25,7 +33,12 @@
 				<div class="input-group-prepend">
 					<div class="input-group-text">STR</div>
 				</div>
-				<input type="text" class="form-control" id="characterSTR" />
+				<input
+					type="text"
+					class="form-control"
+					id="characterSTR"
+					value="{{character.str}}"
+				/>
 				<div class="input-group-append">
 					<div class="input-group-text">+0</div>
 				</div>
@@ -36,7 +49,12 @@
 				<div class="input-group-prepend">
 					<div class="input-group-text">DEX</div>
 				</div>
-				<input type="text" class="form-control" id="characterDEX" />
+				<input
+					type="text"
+					class="form-control"
+					id="characterDEX"
+					value="{{character.dex}}"
+				/>
 				<div class="input-group-append">
 					<div class="input-group-text">+0</div>
 				</div>
@@ -47,7 +65,12 @@
 				<div class="input-group-prepend">
 					<div class="input-group-text">CON</div>
 				</div>
-				<input type="text" class="form-control" id="characterCON" />
+				<input
+					type="text"
+					class="form-control"
+					id="characterCON"
+					value="{{character.con}}"
+				/>
 				<div class="input-group-append">
 					<div class="input-group-text">+0</div>
 				</div>
@@ -58,7 +81,12 @@
 				<div class="input-group-prepend">
 					<div class="input-group-text">INT</div>
 				</div>
-				<input type="text" class="form-control" id="characterINT" />
+				<input
+					type="text"
+					class="form-control"
+					id="characterINT"
+					value="{{character.int}}"
+				/>
 				<div class="input-group-append">
 					<div class="input-group-text">+0</div>
 				</div>
@@ -69,7 +97,12 @@
 				<div class="input-group-prepend">
 					<div class="input-group-text">WIS</div>
 				</div>
-				<input type="text" class="form-control" id="characterWIS" />
+				<input
+					type="text"
+					class="form-control"
+					id="characterWIS"
+					value="{{character.wis}}"
+				/>
 				<div class="input-group-append">
 					<div class="input-group-text">+0</div>
 				</div>
@@ -80,7 +113,12 @@
 				<div class="input-group-prepend">
 					<div class="input-group-text">CHA</div>
 				</div>
-				<input type="text" class="form-control" id="characterCHA" />
+				<input
+					type="text"
+					class="form-control"
+					id="characterCHA"
+					value="{{character.cha}}"
+				/>
 				<div class="input-group-append">
 					<div class="input-group-text">+0</div>
 				</div>
@@ -112,4 +150,4 @@
 	</div>
 </div>
 
-<script src="/javascript/save-character.js"></script>
+<script src="/javascript/edit-character.js"></script>

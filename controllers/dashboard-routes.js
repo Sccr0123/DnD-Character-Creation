@@ -43,7 +43,7 @@ router.get("/", (req, res) => {
 		});
 });
 
-router.get('/edit/:id', (req, res) => {
+router.get("/edit/:id", (req, res) => {
 	Character.findOne({
 		where: {
 			id: req.params.id,
@@ -74,10 +74,12 @@ router.get('/edit/:id', (req, res) => {
 				});
 				return;
 			}
-			// console.log(dbCharacterData);
-			res.render('creation', {
-				dbCharacterData,
-				loggedIn: req.session.loggedIn
+
+			const character = dbCharacterData.dataValues;
+
+			res.render("edit-character", {
+				character,
+				loggedIn: req.session.loggedIn,
 			});
 		})
 		.catch((err) => {
