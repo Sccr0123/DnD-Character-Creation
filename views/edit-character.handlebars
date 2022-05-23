@@ -1,153 +1,145 @@
 <div class="container">
-	<form class="row justify-content-md-center form-inline my-3">
-		<div class="col-3 form-group">
-			<label for="characterName">Name: </label>
-			<input type="text" id="characterName" value="{{character.name}}" />
-		</div>
-		<div class="col-3 form-group">
-			<label for="characterLevel">Level: </label>
-			<input
-				type="text"
-				id="characterLevel"
-				value="{{character.level}}"
-			/>
-		</div>
-		<div class="col-3 form-group">
-			<label for="characterClass">Class: </label>
-			<input
-				type="text"
-				id="characterClass"
-				value="{{character.class}}"
-			/>
-		</div>
-		<div class="col-3 form-group">
-			<label for="characterRace">Race: </label>
-			<input type="text" id="characterRace" />
-		</div>
-	</form>
+  <form class="row justify-content-md-center form-inline my-3">
+    <div class="col-sm-12 col-md-3 form-group">
+      <label for="characterName">Name: </label>
+      <input type="text" id="characterName" value="{{character.name}}" />
+    </div>
+    <div class="col-sm-12 col-md-3 form-group">
+      <label for="characterLevel">Level: </label>
+      <input type="text" id="characterLevel" value="{{character.level}}" />
+    </div>
+    <div class="col-sm-12 col-md-3 form-group">
+      <label for="characterClass">Class: </label>
+      <input type="text" id="characterClass" value="{{character.class}}" />
+    </div>
+    <div class="col-sm-12 col-md-3 form-group">
+      <label for="characterRace">Race: </label>
+      <input type="text" id="characterRace" />
+    </div>
+  </form>
 </div>
 <div class="container">
-	<form class="row justify-content-around form-inline">
-		<div class="col-sm-2 my-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<div class="input-group-text">STR</div>
-				</div>
-				<input
-					type="text"
-					class="form-control"
-					id="characterSTR"
-					value="{{character.str}}"
-				/>
-				<div class="input-group-append">
-					<div class="input-group-text">+0</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-2 my-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<div class="input-group-text">DEX</div>
-				</div>
-				<input
-					type="text"
-					class="form-control"
-					id="characterDEX"
-					value="{{character.dex}}"
-				/>
-				<div class="input-group-append">
-					<div class="input-group-text">+0</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-2 my-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<div class="input-group-text">CON</div>
-				</div>
-				<input
-					type="text"
-					class="form-control"
-					id="characterCON"
-					value="{{character.con}}"
-				/>
-				<div class="input-group-append">
-					<div class="input-group-text">+0</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-2 my-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<div class="input-group-text">INT</div>
-				</div>
-				<input
-					type="text"
-					class="form-control"
-					id="characterINT"
-					value="{{character.int}}"
-				/>
-				<div class="input-group-append">
-					<div class="input-group-text">+0</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-2 my-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<div class="input-group-text">WIS</div>
-				</div>
-				<input
-					type="text"
-					class="form-control"
-					id="characterWIS"
-					value="{{character.wis}}"
-				/>
-				<div class="input-group-append">
-					<div class="input-group-text">+0</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-2 my-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<div class="input-group-text">CHA</div>
-				</div>
-				<input
-					type="text"
-					class="form-control"
-					id="characterCHA"
-					value="{{character.cha}}"
-				/>
-				<div class="input-group-append">
-					<div class="input-group-text">+0</div>
-				</div>
-			</div>
-		</div>
-	</form>
+  <form class="row justify-content-around form-inline">
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">STR</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="characterSTR"
+          value="{{character.str}}"
+        />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">DEX</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="characterDEX"
+          value="{{character.dex}}"
+        />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">CON</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="characterCON"
+          value="{{character.con}}"
+        />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">INT</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="characterINT"
+          value="{{character.int}}"
+        />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">WIS</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="characterWIS"
+          value="{{character.wis}}"
+        />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">CHA</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="characterCHA"
+          value="{{character.cha}}"
+        />
+        <div class="input-group-append">
+          <div class="input-group-text">+0</div>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 
 <div class="container">
-	<div class="row justify-content-around">
-		<input
-			id="saveBtn"
-			class="col-sm-2 my-1 btn btn-custom"
-			type="button"
-			value="Save Character"
-		/>
-		<input
-			id="deleteBtn"
-			class="col-sm-2 my-1 btn btn-custom"
-			type="button"
-			value="Delete Character"
-		/>
-		<input
-			id="resetBtn"
-			class="col-sm-2 my-1 btn btn-custom"
-			type="button"
-			value="Reset Character"
-		/>
-	</div>
+  <div class="row justify-content-around">
+    <input
+      id="saveBtn"
+      class="col-sm-2 my-1 btn btn-custom"
+      type="button"
+      value="Save Character"
+    />
+    <input
+      id="deleteBtn"
+      class="col-sm-2 my-1 btn btn-custom"
+      type="button"
+      value="Delete Character"
+    />
+    <input
+      id="resetBtn"
+      class="col-sm-2 my-1 btn btn-custom"
+      type="button"
+      value="Reset Character"
+    />
+  </div>
 </div>
 
 <script src="/javascript/edit-character.js"></script>
