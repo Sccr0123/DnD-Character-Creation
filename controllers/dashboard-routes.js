@@ -109,7 +109,10 @@ router.put("/edit/:id", (req, res) => {
 });
 
 router.get("/new_character", (req, res) => {
-	res.render("creation");
+	res.render("creation", {
+		characters,
+		loggedIn: req.session.loggedIn,
+	});
 });
 
 module.exports = router;
