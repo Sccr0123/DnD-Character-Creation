@@ -11,8 +11,9 @@ router.get("/", (req, res) => {
 		attributes: [
 			"id",
 			"name",
-			"class",
 			"level",
+			"class",
+			"race",
 			"str",
 			"dex",
 			"con",
@@ -51,8 +52,9 @@ router.get("/edit/:id", (req, res) => {
 		attributes: [
 			"id",
 			"name",
-			"class",
 			"level",
+			"class",
+			"race",
 			"str",
 			"dex",
 			"con",

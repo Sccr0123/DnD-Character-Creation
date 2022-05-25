@@ -6,8 +6,9 @@ async function saveBtnHandler(event) {
 	];
 
 	const name = document.querySelector("#characterName").value.trim();
-	const charClass = document.querySelector("#characterClass").value.trim();
 	const level = document.querySelector("#characterLevel").value.trim();
+	const charClass = document.querySelector("#characterClass").value.trim();
+	const race = document.querySelector("#characterRace").value.trim();
 	const str = document.querySelector("#characterSTR").value.trim();
 	const dex = document.querySelector("#characterDEX").value.trim();
 	const con = document.querySelector("#characterCON").value.trim();
@@ -15,13 +16,14 @@ async function saveBtnHandler(event) {
 	const wis = document.querySelector("#characterWIS").value.trim();
 	const cha = document.querySelector("#characterCHA").value.trim();
 
-	if (name && charClass && level && str && dex && con && int && wis && cha) {
+	if (id && name && level && charClass && race && str && dex && con && int && wis && cha) {
 		const response = await fetch(`/api/characters/${id}`, {
 			method: "PUT",
 			body: JSON.stringify({
 				name,
-				charClass,
 				level,
+				charClass,
+				race,
 				str,
 				dex,
 				con,
@@ -32,9 +34,11 @@ async function saveBtnHandler(event) {
 			headers: { "Content-Type": "application/json" },
 		});
 
+		console.log(response);
+
 		if (response.ok) {
-			response.json({ message: "character saved" });
-			window.location.replace("/dashboard");
+			response.json({ message: "Character Saved" });
+			// window.location.replace("/dashboard");
 		} else {
 			console.log(response.statusText);
 		}

@@ -7,16 +7,19 @@
 						class="name stats list-group list-group-flush d-flex justify-content-between"
 					>
 						<div class="list-group-item">Name: {{name}}</div>
-						<div class="list-group-item">Class: {{class}}</div>
 						<div class="list-group-item">Level: {{level}}</div>
-						<div class="list-group-item">Creator:
-							{{user.username}}</div>
+						<div class="list-group-item">Class: {{class}}</div>
+						{{#if race}}
+							<div class="list-group-item">Race: {{race}}</div>
+						{{/if}}
 						<div class="list-group-item">Strength: {{str}}</div>
 						<div class="list-group-item">Dexterity: {{dex}}</div>
 						<div class="list-group-item">Constitution: {{con}}</div>
 						<div class="list-group-item">Intelligence: {{int}}</div>
 						<div class="list-group-item">Wisdom: {{wis}}</div>
 						<div class="list-group-item">Charisma: {{cha}}</div>
+						<div class="list-group-item">Creator:
+							{{user.username}}</div>
 					</article>
 				</div>
 			</div>

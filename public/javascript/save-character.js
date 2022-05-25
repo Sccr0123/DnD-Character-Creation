@@ -7,8 +7,9 @@ async function saveBtnHandler(event) {
 		window.location.toString().split("/").length - 1
 	];
 	const name = document.querySelector("#characterName").value.trim();
-	const charClass = document.querySelector("#characterClass").value.trim();
 	const level = document.querySelector("#characterLevel").value.trim();
+	const charClass = document.querySelector("#characterClass").value.trim();
+	const race = document.querySelector("#characterRace").value.trim();
 	const str = document.querySelector("#characterSTR").value.trim();
 	const dex = document.querySelector("#characterDEX").value.trim();
 	const con = document.querySelector("#characterCON").value.trim();
@@ -16,19 +17,23 @@ async function saveBtnHandler(event) {
 	const wis = document.querySelector("#characterWIS").value.trim();
 	const cha = document.querySelector("#characterCHA").value.trim();
 
+	alert(race);
+
 	if (name && charClass && level && str && dex && con && int && wis && cha) {
 		const response = await fetch(`/api/characters/`, {
 			method: "POST",
 			body: JSON.stringify({
 				name,
-				charClass,
 				level,
+				charClass,
+				race,
 				str,
 				dex,
 				con,
 				int,
 				wis,
 				cha,
+				id,
 			}),
 			headers: { "Content-Type": "application/json" },
 		});
@@ -38,7 +43,6 @@ async function saveBtnHandler(event) {
 			window.location.replace("/dashboard");
 		} else {
 			console.log(response.statusText);
-			console.log("here");
 		}
 	} else {
 		console.log("Please Fill Everything In");
