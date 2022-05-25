@@ -51,15 +51,13 @@ async function deleteBtnHandler(event) {
 	var urlArray = baseUrl.split("/");
 	const id = urlArray[urlArray.length - 1];
 
-	console.log(id);
-
 	const response = await fetch("/api/characters/" + id, {
 		method: "delete",
 		headers: { "Content-Type": "application/json" },
 	});
 
 	if (response.ok) {
-		res.json({ message: "character deleted" });
+		response.json({ message: "character deleted" });
 		document.replace("/dashboard");
 	} else {
 		console.log(response.statusText);
