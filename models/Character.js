@@ -26,6 +26,10 @@ Character.init(
 			allowNull: false,
 			defaultValue: 1,
 		},
+		race: {
+			type: DataTypes.STRING,
+			allowNull: true,
+		},
 		str: {
 			type: DataTypes.INTEGER,
 			allowNull: false,

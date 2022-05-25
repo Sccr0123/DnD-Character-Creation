@@ -59,27 +59,27 @@ async function rollBtnHandler(event) {
 	switch (event.target) {
 		case rollSTRBtn:
 			document.getElementById("characterSTR").value = roll;
-			document.getElementById("strMod").innerText = return_mod(roll);
+			// document.getElementById("strMod").innerText = return_mod(roll);
 			break;
 		case rollDEXBtn:
 			document.getElementById("characterDEX").value = roll;
-			document.getElementById("dexMod").innerText = return_mod(roll);
+			// document.getElementById("dexMod").innerText = return_mod(roll);
 			break;
 		case rollCONBtn:
 			document.getElementById("characterCON").value = roll;
-			document.getElementById("conMod").innerText = return_mod(roll);
+			// document.getElementById("conMod").innerText = return_mod(roll);
 			break;
 		case rollINTBtn:
 			document.getElementById("characterINT").value = roll;
-			document.getElementById("intMod").innerText = return_mod(roll);
+			// document.getElementById("intMod").innerText = return_mod(roll);
 			break;
 		case rollWISBtn:
 			document.getElementById("characterWIS").value = roll;
-			document.getElementById("wisMod").innerText = return_mod(roll);
+			// document.getElementById("wisMod").innerText = return_mod(roll);
 			break;
 		case rollCHABtn:
 			document.getElementById("characterCHA").value = roll;
-			document.getElementById("chaMod").innerText = return_mod(roll);
+			// document.getElementById("chaMod").innerText = return_mod(roll);
 			break;
 	}
 }
