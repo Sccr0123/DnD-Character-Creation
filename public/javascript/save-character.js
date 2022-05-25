@@ -17,8 +17,8 @@ async function saveBtnHandler(event) {
 	const cha = document.querySelector("#characterCHA").value.trim();
 
 	if (name && charClass && level && str && dex && con && int && wis && cha) {
-		const response = await fetch(`/api/characters/${id}`, {
-			method: "PUT",
+		const response = await fetch(`/api/characters/`, {
+			method: "POST",
 			body: JSON.stringify({
 				name,
 				charClass,
@@ -38,6 +38,7 @@ async function saveBtnHandler(event) {
 			window.location.replace("/dashboard");
 		} else {
 			console.log(response.statusText);
+			console.log("here");
 		}
 	} else {
 		console.log("Please Fill Everything In");
