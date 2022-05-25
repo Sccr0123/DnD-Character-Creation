@@ -3,9 +3,9 @@
 {{#if characters.length}}
 <section>
   <h2>Your Characters</h2>
-  <dl>
+  <dl class="character-list d-flex justify-content-around flex-wrap">
     {{#each characters as |character|}}
-    <dd>
+    <dd class="col-sm-10 col-md-2 col-lg-2">
       {{> full-character-info character}}
     </dd>
     {{/each}}
