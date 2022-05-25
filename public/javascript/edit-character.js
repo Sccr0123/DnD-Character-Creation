@@ -1,11 +1,10 @@
-//const session = require("express-session");
-
 async function saveBtnHandler(event) {
 	event.preventDefault();
 
 	const id = window.location.toString().split("/")[
 		window.location.toString().split("/").length - 1
 	];
+
 	const name = document.querySelector("#characterName").value.trim();
 	const charClass = document.querySelector("#characterClass").value.trim();
 	const level = document.querySelector("#characterLevel").value.trim();
