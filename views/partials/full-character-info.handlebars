@@ -16,8 +16,12 @@
 						<div class="list-group-item">Intelligence: {{int}}</div>
 						<div class="list-group-item">Wisdom: {{wis}}</div>
 						<div class="list-group-item">Charisma: {{cha}}</div>
-						<div class="list-group-item">Creator:
-							{{user.username}}</div>
+						{{#if user.username}}
+							<div class="list-group-item">Creator:
+								{{user.username}}</div>
+						{{else}}
+							<div class="list-group-item">Created By: The Matrix</div>
+						{{/if}}
 					</article>
 				</div>
 			</div>
