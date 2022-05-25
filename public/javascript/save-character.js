@@ -53,7 +53,7 @@ async function deleteBtnHandler(event) {
 
 	if (response.ok) {
 		res.json({ message: "character deleted" });
-		document.replace("/dashboard");
+		window.location.replace("/dashboard");
 	} else {
 		console.log(response.statusText);
 	}
