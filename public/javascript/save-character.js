@@ -35,7 +35,7 @@ async function saveBtnHandler(event) {
 
 		if (response.ok) {
 			response.json({ message: "character saved" });
-			document.location.replace("/dashboard");
+			window.location.replace("/dashboard");
 		} else {
 			console.log(response.statusText);
 		}
