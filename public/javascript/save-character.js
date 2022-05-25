@@ -17,8 +17,6 @@ async function saveBtnHandler(event) {
 	const wis = document.querySelector("#characterWIS").value.trim();
 	const cha = document.querySelector("#characterCHA").value.trim();
 
-	alert(race);
-
 	if (name && charClass && level && str && dex && con && int && wis && cha) {
 		const response = await fetch(`/api/characters/`, {
 			method: "POST",
