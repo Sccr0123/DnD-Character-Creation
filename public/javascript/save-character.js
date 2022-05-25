@@ -12,7 +12,7 @@ async function saveBtnHandler(event) {
 	const cha = document.querySelector("#characterCHA").value.trim();
 
 	if (name && charClass && race && str && dex && con && int && wis && cha) {
-		const response = await fetch("/api/characters", {
+		const res = await fetch("/api/characters", {
 			method: "post",
 			body: JSON.stringify({
 				name,
@@ -28,7 +28,7 @@ async function saveBtnHandler(event) {
 			headers: { "Content-Type": "application/json" },
 		});
 
-		if (response.ok) {
+		if (res.ok) {
 			res.json({ message: "character saved" });
 			window.location.replace("/dashboard");
 		} else {
@@ -46,12 +46,12 @@ async function deleteBtnHandler(event) {
 
 	console.log(id);
 
-	const response = await fetch("/api/characters/" + id, {
+	const res = await fetch("/api/characters/" + id, {
 		method: "delete",
 		headers: { "Content-Type": "application/json" },
 	});
 
-	if (response.ok) {
+	if (res.ok) {
 		res.json({ message: "character deleted" });
 		window.location.replace("/dashboard");
 	} else {
