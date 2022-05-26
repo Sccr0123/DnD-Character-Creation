@@ -4,7 +4,6 @@ const roller = function callback(err, result) {
   if (err) {
     throw err;
   } else {
-    //console.log(result);
     return result;
   }
 }

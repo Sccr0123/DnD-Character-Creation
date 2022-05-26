@@ -11,8 +11,9 @@ router.get("/", (req, res) => {
 		attributes: [
 			"id",
 			"name",
-			"class",
 			"level",
+			"class",
+			"race",
 			"str",
 			"dex",
 			"con",
@@ -51,8 +52,9 @@ router.get("/edit/:id", (req, res) => {
 		attributes: [
 			"id",
 			"name",
-			"class",
 			"level",
+			"class",
+			"race",
 			"str",
 			"dex",
 			"con",
@@ -109,7 +111,9 @@ router.put("/edit/:id", (req, res) => {
 });
 
 router.get("/new_character", (req, res) => {
-	res.render("creation");
+	res.render("creation", {
+		loggedIn: req.session.loggedIn,
+	});
 });
 
 module.exports = router;

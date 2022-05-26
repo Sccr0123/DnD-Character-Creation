@@ -10,8 +10,9 @@ router.get("/", (req, res) => {
 		attributes: [
 			"id",
 			"name",
-			"class",
 			"level",
+			"class",
+			"race",
 			"str",
 			"dex",
 			"con",
@@ -41,8 +42,9 @@ router.get("/:id", (req, res) => {
 		attributes: [
 			"id",
 			"name",
-			"class",
 			"level",
+			"class",
+			"race",
 			"str",
 			"dex",
 			"con",
@@ -76,11 +78,12 @@ router.get("/:id", (req, res) => {
 		});
 });
 
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
 	Character.create({
 		name: req.body.name,
-		class: req.body.charClass,
 		level: req.body.level,
+		class: req.body.charClass,
+		race: req.body.race,
 		str: req.body.str,
 		dex: req.body.dex,
 		con: req.body.con,
@@ -100,8 +103,9 @@ router.put("/:id", withAuth, (req, res) => {
 	Character.update(
 		{
 			name: req.body.name,
-			class: req.body.charClass,
 			level: req.body.level,
+			class: req.body.charClass,
+			race: req.body.race,
 			str: req.body.str,
 			dex: req.body.dex,
 			con: req.body.con,

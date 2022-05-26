@@ -3,10 +3,14 @@
 		<div class="list-group list-group-flush d-flex justify-content-between">
 
 			<div class="list-group-item">Name: {{name}}</div>
-			<div class="list-group-item">Class: {{class}}</div>
 			<div class="list-group-item">Level:{{level}}</div>
-			<div class="list-group-item">Created By:
-				{{user.username}}</div>
+			<div class="list-group-item">Class: {{class}}</div>
+			<div class="list-group-item">Race: {{race}}</div>
+			{{#if user.username}}
+				<div class="list-group-item">Creator: {{user.username}}</div>
+			{{else}}
+				<div class="list-group-item">Created By: The Matrix</div>
+			{{/if}}
 		</div>
 	</a>
 </div>

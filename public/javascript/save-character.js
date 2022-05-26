@@ -1,7 +1,13 @@
+//const session = require("express-session");
+
 async function saveBtnHandler(event) {
 	event.preventDefault();
 
+	const id = window.location.toString().split("/")[
+		window.location.toString().split("/").length - 1
+	];
 	const name = document.querySelector("#characterName").value.trim();
+	const level = document.querySelector("#characterLevel").value.trim();
 	const charClass = document.querySelector("#characterClass").value.trim();
 	const race = document.querySelector("#characterRace").value.trim();
 	const str = document.querySelector("#characterSTR").value.trim();
@@ -11,11 +17,12 @@ async function saveBtnHandler(event) {
 	const wis = document.querySelector("#characterWIS").value.trim();
 	const cha = document.querySelector("#characterCHA").value.trim();
 
-	if (name && charClass && race && str && dex && con && int && wis && cha) {
-		const response = await fetch("/api/characters", {
-			method: "post",
+	if (name && charClass && level && str && dex && con && int && wis && cha) {
+		const response = await fetch(`/api/characters/`, {
+			method: "POST",
 			body: JSON.stringify({
 				name,
+				level,
 				charClass,
 				race,
 				str,
@@ -24,38 +31,19 @@ async function saveBtnHandler(event) {
 				int,
 				wis,
 				cha,
+				id,
 			}),
 			headers: { "Content-Type": "application/json" },
 		});
 
 		if (response.ok) {
-			res.json({ message: "character saved" });
+			response.json({ message: "character saved" });
 			window.location.replace("/dashboard");
 		} else {
 			console.log(response.statusText);
 		}
-	}
-}
-
-async function deleteBtnHandler(event) {
-	event.preventDefault();
-
-	var baseUrl = window.location.href;
-	var urlArray = baseUrl.split("/");
-	const id = urlArray[urlArray.length - 1];
-
-	console.log(id);
-
-	const response = await fetch("/api/characters/" + id, {
-		method: "delete",
-		headers: { "Content-Type": "application/json" },
-	});
-
-	if (response.ok) {
-		res.json({ message: "character deleted" });
-		document.replace("/dashboard");
 	} else {
-		console.log(response.statusText);
+		console.log("Please Fill Everything In");
 	}
 }
 
@@ -75,7 +63,4 @@ function resetBtnHandler(event) {
 }
 
 document.querySelector("#saveBtn").addEventListener("click", saveBtnHandler);
-document
-	.querySelector("#deleteBtn")
-	.addEventListener("click", deleteBtnHandler);
 document.querySelector("#resetBtn").addEventListener("click", resetBtnHandler);
