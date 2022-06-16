@@ -97,6 +97,11 @@ h2 {
     font-family: 'UnifrakturCook', cursive; */
 }
 
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
 .card {
   box-shadow: 2px 3px 6px #626a54, 0 0 53px #8a4d0f inset;
   background: #f9f7f4 !important;
